@@ -1,4 +1,5 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const REACT_PROJECT_ENTRY_PATH = path.resolve(__dirname, './src/index.js');
 
@@ -18,5 +19,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: './src/index.html'
+    })
+  ]
 }
