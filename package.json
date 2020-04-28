@@ -1,7 +1,7 @@
 {
   "name": "poza-react-boilerplate",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Jaemin Ahn <jae7415@gmail.com>",
-  "license": "MIT"
+  "version": "0.1.0",
+  "author": "POZAlabs",
+  "license": "MIT",
+  "description": "POZAlabs 프론트 엔드 프로젝트를 위한 React 보일러 플레이트"
 }
