@@ -6,7 +6,7 @@
   "description": "POZAlabs 프론트 엔드 프로젝트를 위한 React 보일러 플레이트",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --open --hot"
+    "dev": "webpack-dev-server --mode development --hot"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -21,6 +21,7 @@
     "@typescript-eslint/parser": "^2.30.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
