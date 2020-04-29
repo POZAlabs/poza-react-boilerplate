@@ -3,7 +3,6 @@
 
 const shell = require("shelljs");
 const { exec } = require("child_process");
-const path = require("path");
 const del = require("del");
 const readline = require("readline");
 const compareVersions = require("compare-versions");

@@ -7,7 +7,9 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development --hot",
-    "setup": "node ./scripts/setup.js"
+    "presetup": "yarn add -D shelljs del compare-versions chalk",
+    "setup": "node ./scripts/setup.js",
+    "postsetup": "yarn remove shelljs del compare-versions chalk"
   },
   "engines": {
     "yarn": ">=1.22.4",
@@ -27,8 +29,6 @@
     "@typescript-eslint/parser": "^2.30.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.10.7",
-    "compare-versions": "^3.6.0",
-    "del": "^5.1.0",
     "dotenv-webpack": "^1.7.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
@@ -37,7 +37,6 @@
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
     "prettier": "^2.0.5",
-    "shelljs": "^0.8.4",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
