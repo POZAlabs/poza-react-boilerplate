@@ -1,12 +1,18 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const DotEnvWebpack = require("dotenv-webpack");
 
-const REACT_PROJECT_ENTRY_PATH = path.resolve(__dirname, "./src/index.tsx");
+const REACT_PROJECT_ENTRY_PATH = path.resolve("./src/index.tsx");
+
+const dotEnvPath =
+  process.env.NODE_ENV !== "production"
+    ? ".env.development"
+    : ".env.production";
 
 module.exports = {
   entry: REACT_PROJECT_ENTRY_PATH,
   output: {
-    path: path.resolve(__dirname, "./.dist"),
+    path: path.resolve("./.dist"),
     filename: "index_bundle.js",
   },
   resolve: {
@@ -44,6 +50,9 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: "./src/index.html",
+    }),
+    new DotEnvWebpack({
+      path: path.resolve(".env", dotEnvPath),
     }),
   ],
 };
