@@ -5,8 +5,8 @@ import Logo from "../assets/svgs/logo.svg";
 const App: React.FC = () => {
   return (
     <Wrapper>
-      <h1>This is Demo</h1>
       <Logo />
+      <h2>{process.env.EXAMPLE_VARIABLE}</h2>
     </Wrapper>
   );
 };
