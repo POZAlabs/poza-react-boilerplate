@@ -1,7 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const App: React.FC = () => {
-  return <div>This is Demo</div>
+  return <Wrapper>This is Demo</Wrapper>
 }
+
+const Wrapper = styled.h1``
 
 export default App;
