@@ -1,6 +1,14 @@
-import React from "react";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
 
 import { App } from "./pages";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+import GlobalStyle from "./utils/globalStyle";
+
+ReactDOM.render(
+  <Fragment>
+    <GlobalStyle />
+    <App />
+  </Fragment>,
+  document.getElementById("app")
+);

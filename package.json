@@ -1,12 +1,19 @@
 {
   "name": "poza-react-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "POZAlabs",
   "license": "MIT",
   "description": "POZAlabs 프론트 엔드 프로젝트를 위한 React 보일러 플레이트",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --hot"
+    "dev": "webpack-dev-server --mode development --hot",
+    "presetup": "yarn add -D shelljs del compare-versions chalk",
+    "setup": "node ./scripts/setup.js",
+    "postsetup": "yarn remove shelljs del compare-versions chalk"
+  },
+  "engines": {
+    "yarn": ">=1.22.4",
+    "node": ">=8.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -17,6 +24,7 @@
     "@types/node": "^13.13.4",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
+    "@types/styled-components": "^5.1.0",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "babel-loader": "^8.1.0",
