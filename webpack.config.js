@@ -1,16 +1,16 @@
-const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
 
-const REACT_PROJECT_ENTRY_PATH = path.resolve(__dirname, './src/index.tsx');
+const REACT_PROJECT_ENTRY_PATH = path.resolve(__dirname, "./src/index.tsx");
 
 module.exports = {
   entry: REACT_PROJECT_ENTRY_PATH,
-  output:{
-    path: path.resolve(__dirname, './.dist'),
-    filename: 'index_bundle.js'
+  output: {
+    path: path.resolve(__dirname, "./.dist"),
+    filename: "index_bundle.js",
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   module: {
     rules: [
@@ -18,14 +18,14 @@ module.exports = {
         test: /\.(js|ts)x?$/,
         exclude: /node_module/,
         use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
+          loader: "babel-loader",
+        },
+      },
+    ],
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
-}
+      template: "./src/index.html",
+    }),
+  ],
+};
