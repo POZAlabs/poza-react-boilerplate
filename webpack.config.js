@@ -21,6 +21,24 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.svg$/,
+        use: {
+          loader: "@svgr/webpack",
+        },
+      },
+      {
+        test: /.(png|jpg|gif)$/,
+        use: {
+          loader: "file-loader",
+        },
+      },
+      {
+        test: /.(woff|woff2|eot|ttf|otf)$/,
+        use: {
+          loader: "file-loader",
+        },
+      },
     ],
   },
   plugins: [
