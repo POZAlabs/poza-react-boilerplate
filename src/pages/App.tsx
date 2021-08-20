@@ -1,13 +1,13 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
-import ReactLogo from "../assets/svgs/react.svg";
-import PozalabsLogo from "../assets/svgs/pozalabs.svg";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import ReactLogo from '../assets/svgs/react.svg';
+import PozalabsLogo from '../assets/svgs/pozalabs.svg';
 
 const App: React.FC = () => {
   return (
     <Wrapper>
       <Header>
-        React Boilerplates created by{" "}
+        React Boilerplates created by{' '}
         <Link
           target="_blank"
           rel="noopener noreferrer"
