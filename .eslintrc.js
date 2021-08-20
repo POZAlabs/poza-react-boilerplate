@@ -20,6 +20,15 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-var-requires": "off",
     "react/prop-types": "off",
+    "no-console": "off",
+    'prettier/prettier': [
+      'warn',
+      {
+        singleQuote: true,
+        semi: true, 
+        trailingComma: 'all'
+      }
+    ],
   },
   settings: {
     react: {
