@@ -8,20 +8,12 @@ const App: React.FC = () => {
     <Wrapper>
       <Header>
         React Boilerplates created by{' '}
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://pozalabs.com"
-        >
+        <Link target="_blank" rel="noopener noreferrer" href="http://pozalabs.com">
           POZAlab
         </Link>
       </Header>
       <Logos>
-        <LogoLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://pozalabs.com"
-        >
+        <LogoLink target="_blank" rel="noopener noreferrer" href="http://pozalabs.com">
           <PozalabsLogo className="pozalabs-logo" />
         </LogoLink>
         <ReactLogo className="react-logo" />
