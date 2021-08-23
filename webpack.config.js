@@ -4,10 +4,7 @@ const DotEnvWebpack = require('dotenv-webpack');
 
 const REACT_PROJECT_ENTRY_PATH = path.resolve('./src/index.tsx');
 
-const dotEnvPath =
-  process.env.NODE_ENV !== 'production'
-    ? '.env.development'
-    : '.env.production';
+const dotEnvPath = process.env.NODE_ENV !== 'production' ? '.env.development' : '.env.production';
 
 module.exports = {
   entry: REACT_PROJECT_ENTRY_PATH,
