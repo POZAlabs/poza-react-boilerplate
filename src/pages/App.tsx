@@ -1,27 +1,19 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
-import ReactLogo from "../assets/svgs/react.svg";
-import PozalabsLogo from "../assets/svgs/pozalabs.svg";
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import ReactLogo from '../assets/svgs/react.svg';
+import PozalabsLogo from '../assets/svgs/pozalabs.svg';
 
 const App: React.FC = () => {
   return (
     <Wrapper>
       <Header>
-        React Boilerplates created by{" "}
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://pozalabs.com"
-        >
+        React Boilerplates created by{' '}
+        <Link target="_blank" rel="noopener noreferrer" href="http://pozalabs.com">
           POZAlab
         </Link>
       </Header>
       <Logos>
-        <LogoLink
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://pozalabs.com"
-        >
+        <LogoLink target="_blank" rel="noopener noreferrer" href="http://pozalabs.com">
           <PozalabsLogo className="pozalabs-logo" />
         </LogoLink>
         <ReactLogo className="react-logo" />

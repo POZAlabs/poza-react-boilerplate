@@ -1,22 +1,22 @@
-const path = require("path");
-const HTMLWebpackPlugin = require("html-webpack-plugin");
-const DotEnvWebpack = require("dotenv-webpack");
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const DotEnvWebpack = require('dotenv-webpack');
 
-const REACT_PROJECT_ENTRY_PATH = path.resolve("./src/index.tsx");
+const REACT_PROJECT_ENTRY_PATH = path.resolve('./src/index.tsx');
 
 const dotEnvPath =
-  process.env.NODE_ENV !== "production"
-    ? ".env.development"
-    : ".env.production";
+  process.env.NODE_ENV !== 'production'
+    ? '.env.development'
+    : '.env.production';
 
 module.exports = {
   entry: REACT_PROJECT_ENTRY_PATH,
   output: {
-    path: path.resolve("./.dist"),
-    filename: "index_bundle.js",
+    path: path.resolve('./.dist'),
+    filename: 'index_bundle.js',
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   module: {
     rules: [
@@ -24,35 +24,35 @@ module.exports = {
         test: /\.(js|ts)x?$/,
         exclude: /node_module/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.svg$/,
         use: {
-          loader: "@svgr/webpack",
+          loader: '@svgr/webpack',
         },
       },
       {
         test: /.(png|jpg|gif)$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
         },
       },
       {
         test: /.(woff|woff2|eot|ttf|otf)$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
         },
       },
     ],
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
     new DotEnvWebpack({
-      path: path.resolve(".env", dotEnvPath),
+      path: path.resolve('.env', dotEnvPath),
     }),
   ],
 };
