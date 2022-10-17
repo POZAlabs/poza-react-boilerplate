@@ -1,14 +1,15 @@
-import React, { Fragment } from "react";
-import ReactDOM from "react-dom";
+import React, { Fragment } from 'react';
+import { createRoot } from 'react-dom/client';
 
-import { App } from "./pages";
+import { App } from './pages';
+import GlobalStyle from './utils/globalStyle';
 
-import GlobalStyle from "./utils/globalStyle";
+const container = document.getElementById('app');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
 
-ReactDOM.render(
+root.render(
   <Fragment>
     <GlobalStyle />
     <App />
   </Fragment>,
-  document.getElementById("app")
 );
