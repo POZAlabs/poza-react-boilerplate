@@ -5,8 +5,10 @@
   "license": "MIT",
   "description": "POZAlabs 프론트 엔드 프로젝트를 위한 React 보일러 플레이트",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --hot",
+    "dev": "vite",
+    "build": "vite build",
+    "build:dev": "vite build --mode=development",
+    "preview": "vite preview",
     "presetup": "yarn add -D shelljs del compare-versions chalk",
     "setup": "node ./scripts/setup.js",
     "postsetup": "yarn remove shelljs del compare-versions chalk"
