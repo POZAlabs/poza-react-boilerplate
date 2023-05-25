@@ -28,12 +28,6 @@ export default ({ mode }) => {
                   keepImportant: false,
                 },
               },
-              {
-                name: 'removeAttrs',
-                params: {
-                  attrs: ['fill', 'fill-rule', 'stroke', 'version', 'class'],
-                },
-              },
             ],
           },
         },
