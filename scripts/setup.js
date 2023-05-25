@@ -153,7 +153,7 @@ function checkNodeVersion(minimalNodeVersion) {
       const nodeVersion = stdout.trim();
       if (err) {
         reject(new Error(err));
-      } else if (compareVersions(nodeVersion, minimalNodeVersion) === -1) {
+      } else if (compareVersions.compareVersions(nodeVersion, minimalNodeVersion) === -1) {
         reject(
           new Error(
             `You need Node.js v${minimalNodeVersion} or above but you have v${nodeVersion}`
@@ -177,7 +177,7 @@ function checkYarnVersion(minimalYarnVersion) {
       const yarnVersion = stdout.trim();
       if (err) {
         reject(new Error(err));
-      } else if (compareVersions(yarnVersion, minimalYarnVersion) === -1) {
+      } else if (compareVersions.compareVersions(yarnVersion, minimalYarnVersion) === -1) {
         reject(
           new Error(
             `You need Yarn v${minimalYarnVersion} or above but you have v${yarnVersion}`
