@@ -10,7 +10,7 @@
     "build:dev": "vite build --mode=development",
     "preview": "vite preview",
     "test": "jest --watchAll --silent",
-    "presetup": "yarn add -D shelljs del compare-versions chalk",
+    "presetup": "yarn add -D shelljs del@6.1.1 compare-versions chalk@4.1.2",
     "setup": "node ./scripts/setup.js",
     "postsetup": "yarn remove shelljs del compare-versions chalk"
   },
