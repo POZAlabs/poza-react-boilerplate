@@ -34,12 +34,6 @@ export default ({ mode }) => {
                   attrs: ['fill', 'fill-rule', 'stroke', 'version', 'class'],
                 },
               },
-              {
-                name: 'sortAttrs',
-                params: {
-                  orders: ['viewBox', 'class'],
-                },
-              },
             ],
           },
         },
