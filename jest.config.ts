@@ -80,21 +80,10 @@ const config: Config = {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
 
-  moduleNameMapper: {
-    '\\.svg': '<rootDir>/src/__mocks__/svgrMock.jsx',
-    '\\.(scss|css|less)$': '<rootDir>/src/__mocks__/styleMock.js',
-    '^@Assets/(.+)$': '<rootDir>/src/assets/$1',
-    '^@API/(.+)$': '<rootDir>/src/API/$1',
-    '^@API': '<rootDir>/src/API/index.ts',
-    '^@Components/(.+)$': '<rootDir>/src/components/$1',
-    '^@Containers/(.+)': '<rootDir>/src/containers/$1',
-    '^@Hooks/(.+)$': '<rootDir>/src/hooks/$1',
-    '^@Pages/(.+)$': '<rootDir>/src/pages/$1',
-    '^@Store/(.+)$': '<rootDir>/src/store/$1',
-    '^@Utils/(.+)$': '<rootDir>/src/utils/$1',
-    '^@Styles/(.+)$': '<rootDir>/src/styles/$1',
-    '^@Types/(.+)$': '<rootDir>/src/types/$1',
-  },
+  // moduleNameMapper: {
+  //   '\\.svg': '<rootDir>/src/__mocks__/svgrMock.jsx',
+  //   '\\.(scss|css|less)$': '<rootDir>/src/__mocks__/styleMock.js',
+  // },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -141,8 +130,7 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
-  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  // setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
@@ -184,8 +172,8 @@ const config: Config = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/src/__mocks__/fileTransformer.js',
+    // '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    //   '<rootDir>/src/__mocks__/fileTransformer.js',
     '^.+\\.[jt]sx?$': 'babel-jest',
   },
 
